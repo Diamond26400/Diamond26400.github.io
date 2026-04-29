@@ -1,65 +1,200 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diamond Jamez — Unity Developer & Backend Engineer</title>
+  <title>Diamond Jamez | Unity & Backend Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 60px auto;
-      padding: 20px;
-      background: #0f0f1a;
-      color: #ffffff;
+    /* Modern CSS Variables for easy color management */
+    :root {
+      --bg-color: #0d0d14;
+      --surface-color: #1a1a24;
+      --primary-color: #C9A84C;
+      --text-main: #e2e2e2;
+      --text-muted: #8b8b99;
+      --accent-blue: #89B4FA;
     }
-    h1 { color: #C9A84C; }
-    h2 { color: #C9A84C; font-size: 16px; margin-top: 30px; }
-    a { color: #89B4FA; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1, h2, h3 { font-weight: 600; }
+    
+    h1 { 
+      font-size: 2.8rem; 
+      letter-spacing: -0.5px;
+      margin-bottom: 5px; 
+    }
+    
+    h1 span { color: var(--primary-color); }
+    
+    .subtitle {
+      font-family: 'Fira Code', monospace;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 50px 0 20px 0;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+
+    p { 
+      color: var(--text-muted); 
+      margin-bottom: 15px; 
+      font-size: 1.05rem;
+    }
+
+    a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+    
+    a:hover { 
+      color: var(--primary-color); 
+      text-decoration: underline;
+    }
+
+    /* Upgraded Skills Tags */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
     .tag {
+      font-family: 'Fira Code', monospace;
+      background: var(--surface-color);
+      border: 1px solid #2a2a36;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      transition: all 0.3s ease;
+    }
+    
+    .tag:hover {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(201, 168, 76, 0.1);
+    }
+
+    /* Project Cards */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .project-card {
+      background: var(--surface-color);
+      border: 1px solid #2a2a36;
+      border-radius: 8px;
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #444;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    
+    .project-title { 
+      font-size: 1.25rem; 
+      margin-bottom: 8px; 
       display: inline-block;
-      background: #1e1e2e;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin: 4px;
-      font-size: 13px;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* Upgraded Contact Buttons */
+    .contact-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    
+    .contact-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--surface-color);
+      border: 1px solid #2a2a36;
+      border-radius: 6px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+    
+    .contact-btn:hover {
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+      text-decoration: none;
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
-  <h1>Diamond Jamez</h1>
-  <p>Unity Gameplay Engineer · Backend Developer · Nigeria</p>
+  <h1>Diamond <span>Jamez</span></h1>
+  <div class="subtitle">Unity Gameplay Engineer · Backend Developer · Nigeria</div>
 
-  <h2>ABOUT</h2>
+  <h2>About</h2>
   <p>
-    Game developer with 3+ years of Unity and C# experience, 
-    specializing in gameplay systems architecture and backend integration. 
-    Currently transitioning into full-stack game development with Node.js.
+    Game developer with 3+ years of Unity and C# experience, specializing in gameplay systems architecture and backend integration. Currently transitioning into full-stack game development with Node.js.
   </p>
 
-  <h2>SKILLS</h2>
-  <span class="tag">Unity</span>
-  <span class="tag">C#</span>
-  <span class="tag">Node.js</span>
-  <span class="tag">Express.js</span>
-  <span class="tag">JWT Auth</span>
-  <span class="tag">Observer Pattern</span>
-  <span class="tag">Game Architecture</span>
-  <span class="tag">REST API</span>
+  <h2>Skills & Tech Stack</h2>
+  <div class="skills-container">
+    <span class="tag">Unity</span>
+    <span class="tag">C#</span>
+    <span class="tag">Node.js</span>
+    <span class="tag">Express.js</span>
+    <span class="tag">JWT Auth</span>
+    <span class="tag">Observer Pattern</span>
+    <span class="tag">Game Architecture</span>
+    <span class="tag">REST API</span>
+  </div>
 
-  <h2>SHIPPED WORK</h2>
-  <p>
-    <a href="https://diamond26400.itch.io/athels-light">
-      Aethel's Light
-    </a> — 3D Medieval Fantasy RPG (Itch.io)
-  </p>
-  <p>
-    AethelLight Advanced Game Systems — Unity Asset Store 
-    (22 decoupled scripts, observer pattern, cloud save)
-  </p>
+  <h2>Shipped Work</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <a href="https://diamond26400.itch.io/athels-light" class="project-title">Aethel's Light</a>
+      <p>3D Medieval Fantasy RPG. Available on <a href="https://diamond26400.itch.io/athels-light">Itch.io</a> and <a href="https://jiwe.io/games/aethels-light-">Jiwe.io</a>.</p>
+    </div>
+    
+    <div class="project-card">
+      <span class="project-title">AethelLight Advanced Game Systems</span>
+      <p>Unity Asset Store package featuring 22 decoupled scripts utilizing the observer pattern and cloud save architecture.</p>
+    </div>
+  </div>
 
-  <h2>CONTACT</h2>
-  <p>
-    <a href="https://www.linkedin.com/in/diamond-jamez-61aa3a200">LinkedIn</a>
-  </p>
-  <p>Email: obaloluwajames5@gmail.com</p>
+  <h2>Contact & Links</h2>
+  <p>Let's build something great. Reach out via email or connect with me on my socials.</p>
+  <div class="contact-links">
+    <a href="mailto:obaloluwajames5@gmail.com" class="contact-btn">Email Me</a>
+    <a href="https://github.com/Diamond26400" class="contact-btn">GitHub</a>
+    <a href="https://www.linkedin.com/in/diamond-jamez-61aa3a200" class="contact-btn">LinkedIn</a>
+  </div>
+  
+</body>
+</html>
